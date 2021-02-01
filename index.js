@@ -66,6 +66,14 @@ Object.keys(models).forEach(k => {
   
 })
 
+app.get('/doc', (req,res) => {
+  res.send(utils.documentation(config))
+})
+
+app.get('/routes', (req,res) => {
+  res.send(utils.routes(config))
+})
+
 app.listen(port, () => {
   console.log(`Listening on ${host}:${port}`)
 })
