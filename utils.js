@@ -23,7 +23,7 @@ function documentation(config){
 
     let routes = `<a href="/routes">Rotas</a>`
 
-    return header + content.join('');
+    return header + content.join('') + routes;
 
     function listAttributes(attributes){
         let content = attributes.map(a => 
